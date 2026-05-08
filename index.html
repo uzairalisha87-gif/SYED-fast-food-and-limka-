@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYED Fast Food & Limka Corner - Premium Fast Food in Karachi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>SYED</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <canvas id="particleCanvas"></canvas>
+            <div class="smoke-effect"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-title-wrapper">
+                <h1 class="hero-title">SYED FAST FOOD</h1>
+                <h1 class="hero-title">& LIMKA CORNER</h1>
+            </div>
+            <p class="hero-subtitle">Fresh Taste • Fast Service • Best Quality</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToMenu()">
+                    <span>Order Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToMenu()">
+                    <span>View Menu</span>
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+        </div>
+        <div class="floating-foods">
+            <div class="food-float" style="--delay: 0s">🍔</div>
+            <div class="food-float" style="--delay: 0.5s">🍟</div>
+            <div class="food-float" style="--delay: 1s">🥤</div>
+            <div class="food-float" style="--delay: 1.5s">🍗</div>
+            <div class="food-float" style="--delay: 2s">🧃</div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Welcome to SYED Fast Food</h2>
+                    <p>Located at Shahrah-e-Faisal Road, East Corner, Karachi, we proudly serve delicious burgers, crispy rolls, refreshing Limka drinks, and fresh juices made with quality ingredients and unforgettable taste.</p>
+                    <p>Our commitment is to deliver the finest fast food experience with premium quality ingredients, lightning-fast service, and an atmosphere that feels as luxurious as the food we serve.</p>
+                    <button class="btn btn-primary" onclick="scrollToContact()">
+                        <span>Contact Us</span>
+                        <i class="fas fa-phone"></i>
+                    </button>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">🏪</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Fresh Ingredients Daily</h3>
+                    <p>Premium quality ingredients sourced fresh daily</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and efficient service without compromise</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tag"></i></div>
+                    <h3>Affordable Prices</h3>
+                    <p>Premium quality at reasonable prices</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-soap"></i></div>
+                    <h3>Clean Kitchen</h3>
+                    <p>Hygienic standards maintained at all times</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-star"></i></div>
+                    <h3>Premium Taste</h3>
+                    <p>Exceptional flavor in every bite</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Family Friendly</h3>
+                    <p>A perfect place for the whole family</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>Best Service in Town</h3>
+                    <p>Award-winning customer service excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Premium Menu</h2>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="burgers">Burgers</button>
+                <button class="tab-btn" data-category="rolls">Rolls</button>
+                <button class="tab-btn" data-category="snacks">Snacks</button>
+                <button class="tab-btn" data-category="drinks">Drinks</button>
+                <button class="tab-btn" data-category="juices">Juices</button>
+                <button class="tab-btn" data-category="deals">Deals</button>
+            </div>
+
+            <div class="menu-items">
+                <!-- Burgers -->
+                <div class="menu-category active" id="burgers">
+                    <div class="menu-card">
+                        <div class="card-emoji">🍔</div>
+                        <h3>Zinger Burger</h3>
+                        <p class="card-price">Rs. 280</p>
+                        <p>Crispy zinger patty with fresh vegetables</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🍗</div>
+                        <h3>Chicken Burger</h3>
+                        <p class="card-price">Rs. 250</p>
+                        <p>Tender chicken patty with special sauce</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🥩</div>
+                        <h3>Beef Burger</h3>
+                        <p class="card-price">Rs. 320</p>
+                        <p>Premium beef patty grilled to perfection</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🧀</div>
+                        <h3>Cheese Burger</h3>
+                        <p class="card-price">Rs. 290</p>
+                        <p>Melted cheese with juicy patty</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🏗️</div>
+                        <h3>Tower Burger</h3>
+                        <p class="card-price">Rs. 450</p>
+                        <p>Three layers of premium patties</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">💪</div>
+                        <h3>Double Patty Burger</h3>
+                        <p class="card-price">Rs. 380</p>
+                        <p>Double beef patties with extra cheese</p>
+                    </div>
+                </div>
+
+                <!-- Rolls -->
+                <div class="menu-category" id="rolls">
+                    <div class="menu-card">
+                        <div class="card-emoji">🌯</div>
+                        <h3>Chicken Roll</h3>
+                        <p class="card-price">Rs. 180</p>
+                        <p>Fresh chicken with vegetables wrapped</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🌯</div>
+                        <h3>Mayo Garlic Roll</h3>
+                        <p class="card-price">Rs. 200</p>
+                        <p>Creamy mayo and garlic seasoned roll</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🌯</div>
+                        <h3>Zinger Roll</h3>
+                        <p class="card-price">Rs. 210</p>
+                        <p>Spicy zinger with fresh vegetables</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🌯</div>
+                        <h3>Cheese Roll</h3>
+                        <p class="card-price">Rs. 220</p>
+                        <p>Melted cheese with grilled vegetables</p>
+                    </div>
+                </div>
+
+                <!-- Snacks -->
+                <div class="menu-category" id="snacks">
+                    <div class="menu-card">
+                        <div class="card-emoji">🍟</div>
+                        <h3>Fries</h3>
+                        <p class="card-price">Rs. 120</p>
+                        <p>Crispy golden fries</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🍟</div>
+                        <h3>Loaded Fries</h3>
+                        <p class="card-price">Rs. 280</p>
+                        <p>Fries with cheese, mayo, and toppings</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🍗</div>
+                        <h3>Nuggets</h3>
+                        <p class="card-price">Rs. 150</p>
+                        <p>Golden fried chicken nuggets (6 pieces)</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🌮</div>
+                        <h3>Shawarma</h3>
+                        <p class="card-price">Rs. 240</p>
+                        <p>Grilled meat with special spices</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🥪</div>
+                        <h3>Club Sandwich</h3>
+                        <p class="card-price">Rs. 280</p>
+                        <p>Three-layer sandwich with all toppings</p>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-category" id="drinks">
+                    <div class="menu-card">
+                        <div class="card-emoji">🧋</div>
+                        <h3>Limka</h3>
+                        <p class="card-price">Rs. 80</p>
+                        <p>Refreshing lemonade drink</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🥤</div>
+                        <h3>Pepsi</h3>
+                        <p class="card-price">Rs. 80</p>
+                        <p>Classic cola beverage</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🥤</div>
+                        <h3>Cola</h3>
+                        <p class="card-price">Rs. 70</p>
+                        <p>Refreshing cola drink</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">💧</div>
+                        <h3>Mineral Water</h3>
+                        <p class="card-price">Rs. 50</p>
+                        <p>Pure and refreshing water</p>
+                    </div>
+                </div>
+
+                <!-- Juices -->
+                <div class="menu-category" id="juices">
+                    <div class="menu-card">
+                        <div class="card-emoji">🥭</div>
+                        <h3>Mango Juice</h3>
+                        <p class="card-price">Rs. 150</p>
+                        <p>Fresh mango juice daily</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🍊</div>
+                        <h3>Orange Juice</h3>
+                        <p class="card-price">Rs. 120</p>
+                        <p>Fresh squeezed orange juice</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🍎</div>
+                        <h3>Apple Juice</h3>
+                        <p class="card-price">Rs. 130</p>
+                        <p>Crisp and fresh apple juice</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🍎</div>
+                        <h3>Pomegranate Juice</h3>
+                        <p class="card-price">Rs. 160</p>
+                        <p>Antioxidant rich pomegranate juice</p>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-emoji">🍓</div>
+                        <h3>Mixed Fruit Juice</h3>
+                        <p class="card-price">Rs. 170</p>
+                        <p>Blend of seasonal fresh fruits</p>
+                    </div>
+                </div>
+
+                <!-- Deals -->
+                <div class="menu-category" id="deals">
+                    <div class="menu-card featured">
+                        <div class="card-emoji">⭐</div>
+                        <h3>Burger + Fries + Drink</h3>
+                        <p class="card-price">Rs. 399</p>
+                        <p>Complete meal deal with special discount</p>
+                    </div>
+                    <div class="menu-card featured">
+                        <div class="card-emoji">👨‍👩‍👧‍👦</div>
+                        <h3>Family Deal</h3>
+                        <p class="card-price">Rs. 1299</p>
+                        <p>4 burgers + 2 fries + 4 drinks</p>
+                    </div>
+                    <div class="menu-card featured">
+                        <div class="card-emoji">👥</div>
+                        <h3>Friends Combo</h3>
+                        <p class="card-price">Rs. 899</p>
+                        <p>3 burgers + loaded fries + 3 drinks</p>
+                    </div>
+                    <div class="menu-card featured">
+                        <div class="card-emoji">🧃</div>
+                        <h3>Juice Combo</h3>
+                        <p class="card-price">Rs. 450</p>
+                        <p>3 fresh juices with snacks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">🍔</div>
+                    <p>Premium Burgers</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">🌯</div>
+                    <p>Crispy Rolls</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">🧃</div>
+                    <p>Fresh Juices</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">🥤</div>
+                    <p>Cold Drinks</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">🍟</div>
+                    <p>Golden Fries</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">🏪</div>
+                    <p>Restaurant Front</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>Best burger on Shahrah-e-Faisal. Never disappoints!</p>
+                    <p class="author">- Happy Customer</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>Amazing juices and Limka. Fresh taste every time!</p>
+                    <p class="author">- Fresh Juice Lover</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>Fast service and delicious taste. Highly recommended!</p>
+                    <p class="author">- Busy Professional</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>Affordable prices with premium quality. Worth every penny!</p>
+                    <p class="author">- Value Seeker</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>Shahrah-e-Faisal Road<br>East Corner<br>Karachi, Pakistan</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p><a href="tel:03043041472">0304 304 1472</a></p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/923043041472" target="_blank">Order via WhatsApp</a></p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Hours</h3>
+                        <p>Open Daily<br>10:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.1234567890123!2d67.0234!3d24.8567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33a0b0b0b0b0b%3A0x0b0b0b0b0b0b0b0b!2sShahrah-e-Faisal%20Road!5e0!3m2!1sen!2s!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SYED Fast Food</h3>
+                    <p>Premium fast food experience with luxury vibes</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> 0304 304 1472</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Shahrah-e-Faisal, Karachi</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2026 SYED Fast Food and Limka Corner. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
